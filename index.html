@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pockletlal</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous"> -->
+        <script src="https://kit.fontawesome.com/83894bc848.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="header" id="header">
+            <nav>
+                <a href="index.html"><img src="images/pocketlal-logo-banner.png"></a>
+                <div class="nav-links" id="nav-links">
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                     </ul>
+                </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </section>
+        <section class="section1">
+            <div class="text-box">
+                <h1>Pocket your favourite brands!</h1>
+                <p> 
+                    join elite brand communities for an elevated experience. <br>let us help you pocket your first brand! contact us.
+                </p>
+                <a href="index.html">know more</a>
+            </div>
+        </section>
+        <section class="section2">
+            <div class="text-box">
+                <h1>Join the chaos!</h1>
+                <p>be in control of your engagement with your favourite brands.</p>
+                <div class="row1">
+                    <div class="col">
+                        <h3>EXCLUSIVE MEMBERSHIPS</h3>
+                        <p>discover and join exclusive membership programs on Pocketlal</p>
+                    </div>
+                    <div class="col">
+                        <h3>RICH ENGAGEMENT</h3>
+                        <p>invest & improve your relationship with your favourite brands</p>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="col">
+                        <h3>FRIENDLY COMMUNITY</h3>
+                        <p>get access to best communities for your favourite brands</p>
+                    </div>
+                    <div class="col">
+                        <h3>KNOW YOUR REWARDS</h3>
+                        <p>know exactly what you are getting and track your rewards in real time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="text-box">
+                <h1>An app so awesome, it should be illegal!</h1>
+            </div>
+            <div class="plot">
+                <div class="feature-rows">
+                    <div class="feature-row" onmouseover="showImage(1)">
+                        <h3>Pocket Brands</h3>
+                        <p>pocket your favourite brands with just a few simple clicks</p>
+                    </div>
+                    <div class="feature-row" onmouseover="showImage(2)">
+                        <h3>Discover Memberships</h3>
+                        <p>get access to some of the most exclusive memberships on pocketlal</p>
+                    </div>
+                    <div class="feature-row" onmouseover="showImage(3)">
+                        <h3>Track your Benefits</h3>
+                        <p>never ever miss your precious rewards</p>
+                    </div>
+                    <div class="feature-row" onmouseover="showImage(4)">
+                        <h3>Community Access</h3>
+                        <p>contribute to & benefit from exclusive brand community</p>
+                    </div>
+                </div>
+                <div class="feature-img-rows">
+                    <div class="feature-img-row" id="feature-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="main">
+                <div class="left">
+                    <div>
+                        <a href="index.html"><img src="images/pocketlal-logo-banner.png"></a>
+                    </div>
+                    <div class="button2">
+                        <a href="" onmouseover="changeText(1)" onmouseout="revertText(1)" id="app-store">
+                            <i class="fab fa-apple" id="fa-apple"></i>  &nbsp; App Store
+                        </a>
+                    </div>
+                    <div class="button2">
+                        <a href="" onmouseover="changeText(2)" onmouseout="revertText(2)" id="play-store">
+                            <i class="fab fa-android" id="fa-android"></i> &nbsp; Play Store
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="footer-links" id="footer-links">
+                        <!-- <i class="fa-solid fa-xmark" onclick="hideMenu()"></i> -->
+                        <ul>
+                            <li><a href="" class="footer-link">Home</a></li>
+                            <li><a href="" class="footer-link">About</a></li>
+                            <li><a href="" class="footer-link">Contact</a></li>
+                         </ul>
+                    </div>
+                </div>
+                <div class="contact">
+                    <h3>Address</h3>
+                    <p>Mumbai, India</p>
+                    <h3>Contact</h3>
+                    <p>+91 9892185605</p>
+                </div>
+            </div>
+            <hr>
+            <div class="follow">
+                <!-- <p>Follow us</p> -->
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </section>
+        <script>
+            var navLinks = document.getElementById("nav-links");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px"
+            }
+            function showImage(id) {
+                var imgID = document.getElementById("feature-img")
+                if (id == 1)
+                    imgID.style.backgroundImage = "url('images/steals_v0.01.png')";
+                else if (id == 2)
+                    imgID.style.backgroundImage = "url('images/steals_v0.02.png')";
+                else if (id == 3)
+                    imgID.style.backgroundImage = "url('images/steals_v0.01.png')";
+                else
+                    imgID.style.backgroundImage = "url('images/steals_v0.02.png')";
+            }
+            function changeText(id) {
+                if (id == 1)
+                    ele = document.getElementById("app-store")
+                else
+                    ele = document.getElementById("play-store")
+                ele.textContent = "Coming Soon"
+            }
+            function revertText(id) {
+                if (id == 1) {
+                    ele = document.getElementById("app-store")
+                    ele.innerHTML = "<i class='fab fa-apple' id='fa-apple'></i>  &nbsp; App Store"
+                } else {
+                    ele = document.getElementById("play-store")
+                    ele.innerHTML = "<i class='fab fa-android' id='fa-android'></i> &nbsp; Play Store"
+                }
+                
+            }
+        </script>
+    </body>
+</html>
